@@ -1,5 +1,5 @@
 { mkDerivation, accelerate, accelerate-llvm, accelerate-llvm-native
-, base, stdenv
+, accelerate-llvm-ptx, base, stdenv
 }:
 mkDerivation {
   pname = "accel-exes";
@@ -8,7 +8,8 @@ mkDerivation {
   isLibrary = false;
   isExecutable = true;
   executableHaskellDepends = [
-    accelerate accelerate-llvm accelerate-llvm-native base
+    accelerate accelerate-llvm accelerate-llvm-native
+    accelerate-llvm-ptx base
   ];
   license = stdenv.lib.licenses.bsd3;
 }

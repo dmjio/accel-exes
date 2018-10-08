@@ -33,6 +33,7 @@ let
     llvm-hs = dontCheck (self.callCabal2nix "llvm-hs" "${llvm-hs-src}/llvm-hs" { llvm-config = pkgs.llvm_6; });
     llvm-hs-pure = dontCheck (self.callCabal2nix "llvm-hs-pure" "${llvm-hs-src}/llvm-hs-pure" {});
     accelerate-llvm-native = dontCheck super.accelerate-llvm-native;
+    accelerate-llvm-ptx = dontCheck super.accelerate-llvm-ptx;
   };
   hPkgs = pkgs.haskellPackages.override { inherit overrides; };
 in
