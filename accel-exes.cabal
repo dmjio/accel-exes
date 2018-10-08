@@ -1,0 +1,21 @@
+name:                accel-exes
+version:             0.1.0.0
+license:             BSD3
+license-file:        LICENSE
+author:              David Johnson
+maintainer:          djohnson.m@gmail.com
+build-type:          Simple
+extra-source-files:  ChangeLog.md
+cabal-version:       >=1.10
+
+executable accel-exes
+  main-is:
+    Main.hs
+  build-depends:
+    base < 5,
+    accelerate,
+    accelerate-llvm,
+    accelerate-llvm-native
+  default-language:
+    Haskell2010
+
